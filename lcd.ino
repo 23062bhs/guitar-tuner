@@ -12,24 +12,9 @@ void setup() {
 
   Serial.begin(9600);
 
-  tft.initR(INITR_GREENTAB);
-
+  // initialise the display
+  tft.initR(INITR_BLACKTAB);
   tft.setRotation(1);
-
-  // black screen
-  tft.fillScreen(ST77XX_BLACK);
-
-  // white border
-  tft.drawRect(0, 0, 160, 128, ST77XX_WHITE);
-
-  // Text 
-  tft.setTextColor(ST77XX_YELLOW); 
-  tft.setTextSize(2); tft.setCursor(15, 20); 
-  tft.println("Hello!"); 
-  tft.setTextColor(ST77XX_CYAN); 
-  tft.setCursor(15, 50); 
-  tft.println("Arduino"); 
-  delay(2000);
 
   // colour test
   tft.fillScreen(ST77XX_RED);
@@ -38,23 +23,18 @@ void setup() {
   delay(500);
   tft.fillScreen(ST77XX_BLUE);
   delay(500);
-  tft.fillScreen(ST77XX_BLACK);
 
-  tft.setCursor(10, 40);
+  // clear the screen
+  tft.fillScreen(ST77XX_BLACK);
+  // display  message
   tft.setTextColor(ST77XX_WHITE);
   tft.setTextSize(2);
+  tft.setCursor(15, 40);
   tft.println("Display");
-  tft.setCursor(10, 65);
+  tft.setCursor(15, 65);
   tft.println("Working");
-
 }
 
 void loop() {
 
 }
-
-
-
-
-
-
