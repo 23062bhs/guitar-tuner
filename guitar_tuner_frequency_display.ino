@@ -11,10 +11,10 @@ Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 const int numSamples = 256;
 int readings[numSamples];
 const int waitTime = 250;
-const int noiseThreshold = 20;
+const int noiseThreshold = 25;
 float lastFrequency = -1;
 
-void drawStaticUI() {
+void drawScreen() {
   tft.fillScreen(ST77XX_BLACK);
   tft.setTextColor(ST77XX_WHITE);
   tft.setTextSize(2);
