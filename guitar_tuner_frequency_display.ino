@@ -11,7 +11,7 @@ Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 const int numSamples = 256;
 int readings[numSamples];
 const int waitTime = 250;
-const int noiseThreshold = 25;
+const int noiseThreshold = 15;
 float lastFrequency = -1;
 
 void drawScreen() {
