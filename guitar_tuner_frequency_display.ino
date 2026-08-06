@@ -43,7 +43,7 @@ void updateFrequency(float frequency) {
 void setup() {
   tft.initR(INITR_BLACKTAB);
   tft.setRotation(1);
-  drawStaticUI();
+  drawScreen();
 }
 
 void loop() {
@@ -66,7 +66,7 @@ void loop() {
   }
   if (maxVal < noiseThreshold) {
     if (lastFrequency != -1) {
-      drawStaticUI();
+      drawScreen();
       lastFrequency = -1;
     }
     return;
