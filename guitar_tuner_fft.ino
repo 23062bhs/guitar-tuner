@@ -8,8 +8,8 @@
 #define TFT_RST   8
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 
-const int samples = 128;             // must be a power of 2 for radix-2 FFT algorithm recursive splitting
-const int samplingFrequency = 1024;
+const int samples = 128; // must be a power of 2 for radix-2 FFT algorithm recursive splitting
+const int samplingFrequency = 1024; // sample rate in Hz (reads A0 1024 times per second)
 
 double vReal[samples];
 double vImag[samples];
@@ -34,6 +34,7 @@ int silentFrameCount = 0;
 float lastFrequency = -1;
 unsigned long samplingPeriodUs;
 
+// LCD display
 void drawScreen() {
   tft.fillScreen(ST77XX_BLACK);
   tft.setTextColor(ST77XX_WHITE);
