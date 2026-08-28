@@ -9,7 +9,7 @@
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 
 const int samples = 128; // must be a power of 2 for the FFT algorithm
-const int samplingFrequency = 1024; // Hz - reads A0 this many times per second
+const int samplingFrequency = 1024; // sample rate in Hz (reads A0 1024 times per second)
 
 double vReal[samples];
 double vImag[samples];
