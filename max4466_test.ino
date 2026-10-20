@@ -126,7 +126,7 @@ void updateDisplay(double frequency) {
 }
 
 void setup() {
-  tft.initR(INITR_BLACKTAB);
+  tft.initR(INITR_144GREENTAB);
   tft.setRotation(1);
   drawScreen();
 
