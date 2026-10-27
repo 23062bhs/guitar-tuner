@@ -27,7 +27,7 @@ const int inTuneCents = 10;
 const int framesToSkip = 1; // discard frames right after pluck while pitch settles
 const int framesToAverage = 7; // frames combined together for the locked reading
 
-// frames quieter than this fraction of the note's loudest frame are ignored,
+// frames quieter than this fraction of the note's loudest frame are ignored
 // and a reading is finalized after this many quiet frames in a row
 const float weakSwingFraction = 0.5;
 const int weakFramesToFinalize = 3;
